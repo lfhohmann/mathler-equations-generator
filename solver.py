@@ -1,17 +1,15 @@
+from const import *
+
+
 def solve(input_equation):
     """Solves an equation passed as a string"""
-
-    # Defining constants
-    ALL_OPERATORS = ["/", "*", "+", "-"]  # List of valid operators
-    NEGATIVE_OPERATOR = "-"  # '-' operator
-    EMPTY_STRING = ""  # Empty string
 
     # Join all consecutive numbers
     equation = []
     temp = EMPTY_STRING
 
     for char in input_equation:
-        if char.isnumeric():
+        if char in NUMBERS:
             temp += char
 
         else:
@@ -24,13 +22,13 @@ def solve(input_equation):
     equation.append(temp)
 
     # If first element is a negative operator, join to the next element (number)
-    if equation[0] == NEGATIVE_OPERATOR:
-        equation[1] = f"{NEGATIVE_OPERATOR}{equation[1]}"
+    if equation[0] == NEGATIVE_OPERATORS[0]:
+        equation[1] = f"{NEGATIVE_OPERATORS[0]}{equation[1]}"
         equation.pop(0)
 
     # Perform all operations (following the operators order - PEDMAS)
     for i in range(0, 3, 2):
-        operators = ALL_OPERATORS.copy()[i : i + 2]
+        operators = OPERATORS.copy()[i : i + 2]
 
         while operators[0] in equation or operators[1] in equation:
             for j, _ in enumerate(equation):

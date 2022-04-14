@@ -1,6 +1,6 @@
 # Mathler Equations Generator
 
-Generates all possible [Mathler](https://mathler.com) game solutions *([Wordle's](https://www.nytimes.com/games/wordle/index.html) mathmetic brother)*
+Generates all possible [Mathler](https://mathler.com) game equations *([Wordle's](https://www.nytimes.com/games/wordle/index.html) mathmatic brother)*
 
 ![term.ooo game image](https://ph-files.imgix.net/3475459e-4792-4be4-90e7-30dbb031b126.png?auto=format&auto=compress&codec=mozjpeg&cs=strip&fit=max&dpr=1)
 
